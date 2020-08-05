@@ -1,1 +1,2 @@
 # Roaster_Control_ESP32
+This is a C/C++ program designed to operate an Quest M3s coffee roaster using an ESP32. Roaster temperature is assessed using 2 thermocouples (ET, BT), which is internally referenced to a temperature read by a DS1820. Thermocouples are interfaced via an I2C MCP3424 18-bit ADC. Output is to a simple TFT LCD display over SPI, user input is done via rotary encoders. The program is fully task based. In the background the fan and heater of the roaster are controlled by Triacs. UART input and output is Artisan compatible.  
