@@ -1,46 +1,11 @@
 
-This directory is intended for project specific (private) libraries.
-PlatformIO will compile them to static libraries and link into executable file.
+To communicate over serial port use:
 
-The source code of each library should be placed in a an own separate directory
-("lib/your_library_name/[here are source files]").
+c:\Users\buechel\Documents\espressif_tools\python_env\idf4.0_py3.5_env\Scripts\python.exe c:\Users\buechel\Documents\espressif_tools\python_env\idf4.0_py3.5_env\Scripts\miniterm.py COM14 115200
 
-For example, see a structure of the following two libraries `Foo` and `Bar`:
+just have
+ to figure out how ANSI color encoding can be displayed
 
-|--lib
-|  |
-|  |--Bar
-|  |  |--docs
-|  |  |--examples
-|  |  |--src
-|  |     |- Bar.c
-|  |     |- Bar.h
-|  |  |- library.json (optional, custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
-|  |
-|  |--Foo
-|  |  |- Foo.c
-|  |  |- Foo.h
-|  |
-|  |- README --> THIS FILE
-|
-|- platformio.ini
-|--src
-   |- main.c
 
-and a contents of `src/main.c`:
-```
-#include <Foo.h>
-#include <Bar.h>
-
-int main (void)
-{
-  ...
-}
-
-```
-
-PlatformIO Library Dependency Finder will find automatically dependent
-libraries scanning project source files.
-
-More information about PlatformIO Library Dependency Finder
-- https://docs.platformio.org/page/librarymanager/ldf.html
+The problem with other comm software is that no CR/LF is sent
+in Putty you can send using Ctrl-J

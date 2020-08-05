@@ -8,5 +8,9 @@
     "editor.quickSuggestions": true
   },
   "C_Cpp.intelliSenseEngineFallback": "Enabled",
-  "cmake.configureOnOpen": true
+  "cmake.configureOnOpen": true,
+  "idf.portWin": "COM14",
+  "files.associations": {
+    "uart.h": "c"
+  }
 }

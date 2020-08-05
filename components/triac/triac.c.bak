@@ -64,7 +64,6 @@ QueueHandle_t *triac_init()
     // set pull-down on FAN and HEATER pin
     // this turned out to be important so that the signal
     // comes down to LOW after RMT fired its pulse sequence
-	// NEW: Maybe idle_out_lv could have also solved the issue?
     gpio_config_t gp;
     gp.mode = GPIO_MODE_OUTPUT;
     gp.pull_up_en = GPIO_PULLUP_DISABLE;
@@ -79,7 +78,7 @@ QueueHandle_t *triac_init()
     config.mem_block_num = 1; // use default of 1 memory block
     config.tx_config.carrier_en = false;
     config.tx_config.loop_en = false;
-    config.tx_config.idle_output_en = true;  //idle_out_lv interesting as its sets the idle level
+    config.tx_config.idle_output_en = true;
     config.rmt_mode = RMT_MODE_TX;
     config.clk_div = 80; //us resolution
     ESP_ERROR_CHECK(rmt_config(&config));
